@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Jumper's Adventure</title>
+    <link rel="stylesheet" href="block-jumper.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="score-board">
+                <div>Score: <span id="score">0</span></div>
+                <div>Lives: <span id="lives">3</span></div>
+                <div>Level: <span id="level">1</span></div>
+                <div>Time: <span id="time">100</span></div>
+            </div>
+            <div class="controls-info">
+                <p>Use ← → to move, Space/W/↑ to jump</p>
+            </div>
+        </div>
+        <div class="level-progress-container">
+            <div class="level-progress-bar" id="levelProgressBar"></div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div id="gameOver" class="game-over hidden">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button id="restartBtn">Play Again</button>
+        </div>
+        <div id="startScreen" class="start-screen">
+            <h1>Block Jumper's Adventure</h1>
+            <div class="character-select">
+                <span>Character:</span>
+                <button type="button" id="charPrevBtn" aria-label="Previous character">◀</button>
+                <span id="characterName" class="character-name">Blox</span>
+                <button type="button" id="charNextBtn" aria-label="Next character">▶</button>
+                <div id="characterPreview" class="character-preview"></div>
+            </div>
+            <p>Use arrow keys to move, Space to jump</p>
+            <p>Avoid enemies and collect coins!</p>
+            <button id="startBtn">Start Game</button>
+        </div>
+    </div>
+    <script src="block-jumper.js"></script>
+</body>
+</html>
